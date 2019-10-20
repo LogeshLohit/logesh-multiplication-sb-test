@@ -30,7 +30,6 @@ export class MultiplicationComponent implements OnInit {
       )
       .subscribe(res => {
         console.log(res);
-        this.multiplication = null;
       });
   }
 
