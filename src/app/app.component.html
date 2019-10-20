@@ -1,0 +1,8 @@
+<hello name="{{ name }}"></hello>
+<p>
+  Start editing to see some magic happen :)
+</p>
+<button (click)="challengeToggle()">Show challenge</button>
+<div *ngIf="showChallenge">
+  <app-multiplication></app-multiplication>
+</div>

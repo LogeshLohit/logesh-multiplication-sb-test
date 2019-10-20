@@ -1,0 +1,23 @@
+<h4>Welcome to our multiplication Challenge..</h4>
+<h5>First factor : {{multiplication.factorA}}</h5>
+
+<h5>First factor : {{multiplication.factorB}}</h5>
+Enter your response:
+<input type="number" name="userValue" [(ngModel)]="userValue">
+<br><br>
+Enter your name:
+<input type="name" name="name" [(ngModel)]="name">
+<h4>Hi..{{name}}..you've entered {{userValue}}..do you want to submit?
+	<button type="submit" (click)="handleSubmit()">Submit</button>
+	<button *ngIf="name"(click)="showPreviousAttempts(name)">Show my previous attempts</button>
+
+
+  <div *ngIf="userAttempts.length > 0">
+    <div *ngFor="let attempt of userAttempts">
+      {{attempt.multiplicationTask.factorA}}
+      {{attempt.multiplicationTask.factorB}}
+      {{attempt.userValue}}
+      {{attempt.multiplicationTask.result}}
+      {{attempt.correct}}
+    </div>
+  </div>
